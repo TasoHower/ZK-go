@@ -3,6 +3,7 @@ package integer
 import "fmt"
 
 /*
+	整数
 	对应 WTF-ZK 01_integer 部分
 	教程参见：https://github.com/WTFAcademy/WTF-zk/blob/main/01_Integer/readme.md
 */
