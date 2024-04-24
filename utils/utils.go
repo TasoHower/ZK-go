@@ -27,3 +27,14 @@ func EuclideanDivision(a, b int64) (int64, int64) {
 func Mod[T int | int16 | int32 | int64](a, b T) T {
 	return (a%b + b) % b
 }
+
+
+func Pow[T int | int16 | int32 | int64](a, b T) T {
+	var ret T =1
+	for b > 0 {
+		ret = ret *a
+		b--
+	}
+
+	return ret
+}
