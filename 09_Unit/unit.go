@@ -8,9 +8,15 @@ func EulerPhi[T int | int16 | int32 | int64](n T) T {
 	// 首先获得 n 的质因数
 	primes := prime.PrimeFactors(n)
 
-	for _,p := range primes {
-		ret = ret - ret / p
-	}	
+	tmp := make(map[T]bool)
+
+	for _, p := range primes {
+		tmp[p] = true
+	}
+
+	for k := range tmp {
+		ret = ret - ret/k
+	}
 
 	return ret
 }
