@@ -59,3 +59,16 @@ func PrimeFactors[T int | int16 | int32 | int64](n T) []T {
 
 	return ret
 }
+
+func IsPrime[T int | int16 | int32 | int64](a T) bool {
+	if a < 2 {
+		return false
+	}
+	for i:=T(2);i*i < a+1;i++ {
+		if a%i == 0{
+			return false
+		}
+	}
+
+	return true
+}

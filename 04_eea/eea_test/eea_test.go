@@ -7,7 +7,7 @@ import (
 )
 
 func TestEEA(t *testing.T) {
-	a,x1,y1 := eea.ExtendedEuclideanAlgorithm(69,7)
+	a,x1,y1 := eea.ExtendedEuclideanAlgorithm(11,12)
 	
 	t.Log(a)
 	t.Log(x1)

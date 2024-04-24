@@ -17,3 +17,4 @@ func ExtendedEuclideanAlgorithm[T int | int16 | int32 | int64](a, b T) (T, T, T)
 
 	return a,x1,y1
 }
+
