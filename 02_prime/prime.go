@@ -16,22 +16,46 @@ import (
 func SieveOfEratosthenes(n int64) {
 	var list []bool
 
-	for i := int64(0);i<n;i++ {
-		list = append(list,true)
+	for i := int64(0); i < n; i++ {
+		list = append(list, true)
 	}
 
 	list[0] = false
 	list[1] = false
 
 	for i := int64(2); i < int64(math.Sqrt(float64(n))); i++ {
-		for j := int64(2); i*j <n;j++ {
+		for j := int64(2); i*j < n; j++ {
 			list[i*j] = false
 		}
 	}
 
-	for n,b:= range list{
+	for n, b := range list {
 		if b {
 			fmt.Println(n)
 		}
 	}
+}
+
+// 分解质因数
+func PrimeFactors[T int | int16 | int32 | int64](n T) []T {
+	var ret []T
+
+	var p T = 2
+
+	for p*p <= n {
+		
+		if n%p == 0 {
+			ret = append(ret, p)
+			n = n / p
+			continue
+		}
+
+		p++
+	}
+
+	if n > 1 {
+		ret = append(ret, n)
+	}
+
+	return ret
 }
