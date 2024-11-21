@@ -7,6 +7,6 @@ import (
 )
 
 func TestDivision(t *testing.T) {
-	a := division.ModularInverseElement(69,70)
+	a, _ := division.ModularInverseElement(69, 70)
 	t.Log(a)
 }

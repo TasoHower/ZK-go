@@ -1,8 +1,9 @@
 package remainder_test
 
 import (
-	remainder "ZK-go/08_Remainder"
 	"testing"
+
+	remainder "ZK-go/08_Remainder"
 )
 
 func TestRemainder(t *testing.T) {

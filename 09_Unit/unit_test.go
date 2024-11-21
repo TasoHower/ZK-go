@@ -1,11 +1,12 @@
 package unit_test
 
 import (
-	unit "ZK-go/09_Unit"
 	"testing"
+
+	unit "ZK-go/09_Unit"
 )
 
 func TestEulerPhi(t *testing.T) {
-	r := unit.EulerPhi(9)
+	r := unit.EulerPhi(15)
 	t.Log(r)
 }

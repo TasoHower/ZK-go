@@ -7,6 +7,6 @@ import (
 )
 
 func TestEuclidean(t *testing.T) {
-	b := euclidean.EuclideanAlgorithm(1234172,12374)
+	b := euclidean.GCD(1263455123465, 1241326541233)
 	t.Log(b)
 }

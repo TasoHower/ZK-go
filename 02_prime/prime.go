@@ -37,13 +37,13 @@ func SieveOfEratosthenes(n int64) {
 }
 
 // 分解质因数
-func PrimeFactors[T int | int16 | int32 | int64](n T) []T {
+func PrimeFactors[T int | int16 | int32 | int64 | uint | uint16 | uint32 | uint64](n T) []T {
 	var ret []T
 
 	var p T = 2
 
 	for p*p <= n {
-		
+
 		if n%p == 0 {
 			ret = append(ret, p)
 			n = n / p
@@ -60,12 +60,12 @@ func PrimeFactors[T int | int16 | int32 | int64](n T) []T {
 	return ret
 }
 
-func IsPrime[T int | int16 | int32 | int64](a T) bool {
+func IsPrime[T int | int16 | int32 | int64 | uint | uint16 | uint32 | uint64](a T) bool {
 	if a < 2 {
 		return false
 	}
-	for i:=T(2);i*i < a+1;i++ {
-		if a%i == 0{
+	for i := T(2); i*i < a+1; i++ {
+		if a%i == 0 {
 			return false
 		}
 	}

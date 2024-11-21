@@ -7,6 +7,6 @@ import (
 )
 
 func TestQuadraticResidue(t *testing.T) {
-	list := modular.QuadraticResidue(5,11)
+	list := modular.QuadraticResidue(5, 11)
 	t.Log(list)
 }

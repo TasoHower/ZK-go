@@ -7,7 +7,8 @@ import (
 )
 
 func TestEulerTheorem(t *testing.T) {
-	a := euler.EulerTheorem(3,11)
+	a, e := euler.EulerTheorem(3, 11)
 
 	t.Log(a)
+	t.Log(e)
 }

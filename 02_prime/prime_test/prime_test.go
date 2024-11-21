@@ -7,9 +7,8 @@ import (
 )
 
 func TestSieveOfEratosthenes(t *testing.T) {
-	prime.SieveOfEratosthenes(200)
+	prime.SieveOfEratosthenes(2000)
 }
-
 
 func TestPrimeFactors(t *testing.T) {
 	list := prime.PrimeFactors(168234551512341)
