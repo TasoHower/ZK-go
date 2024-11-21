@@ -2,10 +2,11 @@ package utils
 
 import (
 	prime "ZK-go/02_prime"
+	"math/big"
 	"math/rand"
 )
 
-func Min(a, b int64) int64 {
+func Min[T int | int16 | int32 | int64 | uint | uint16 | uint32 | uint64](a, b T) T {
 	if a > b {
 		return b
 	}
@@ -51,4 +52,15 @@ func RandomPrime(a int64) int64 {
 			return a
 		}
 	}
+}
+
+func ModPow(base, exponent, modulus int64) int64 {
+	// Convert inputs to *big.Int
+	b := big.NewInt(base)
+	e := big.NewInt(exponent)
+	m := big.NewInt(modulus)
+
+	// Calculate (base^exponent) % modulus
+	result := new(big.Int).Exp(b, e, m)
+	return result.Int64()
 }
