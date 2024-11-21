@@ -64,3 +64,16 @@ func ModPow(base, exponent, modulus int64) int64 {
 	result := new(big.Int).Exp(b, e, m)
 	return result.Int64()
 }
+
+func IsPrime[T int | int16 | int32 | int64 | uint | uint16 | uint32 | uint64](a T) bool {
+	if a < 2 {
+		return false
+	}
+	for i := T(2); i*i < a+1; i++ {
+		if a%i == 0 {
+			return false
+		}
+	}
+
+	return true
+}
